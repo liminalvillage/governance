@@ -1,12 +1,10 @@
-export enum OwnerType {
-  USER = 'User',
-  ORGANIZATION = 'Organization',
-}
+import { Backlog } from './'
 
 export interface Owner {
-  id: number;
-  name: string;
-  type: OwnerType;
-  url: string;
-  avatarUrl: string;
+  id: string
+  name: string
+  type: 'USER' | 'ORGANIZATION'
+  url: string
+  avatarUrl: string
+  backlogs: Array<Backlog>
 }
